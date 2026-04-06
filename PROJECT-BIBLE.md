@@ -1119,15 +1119,19 @@ All managed via OpenClaw cron system.
 
 ### Getting the Code
 
-The scanner source code lives in the OpenClaw workspace git repository:
+The scanner source code is hosted on GitHub:
+
+**Repository:** https://github.com/spiceit1/ticket-flip-scanner
 
 ```bash
 # Clone the repository
-git clone <repository-url> openclaw-workspace
-cd openclaw-workspace/deal-scanner
+git clone https://github.com/spiceit1/ticket-flip-scanner.git
+cd ticket-flip-scanner
+
+# Install dependencies
+npm install
 
 # Or if already on the machine, just pull latest
-cd /Users/douglasdweck/.openclaw/workspace
 git pull
 ```
 
