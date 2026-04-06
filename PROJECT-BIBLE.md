@@ -1117,23 +1117,38 @@ All managed via OpenClaw cron system.
 
 ## 12. Source Code & Git Repository
 
-### Getting the Code
-
-The scanner source code is hosted on GitHub:
+### Scanner Code
 
 **Repository:** https://github.com/spiceit1/ticket-flip-scanner
 
 ```bash
-# Clone the repository
 git clone https://github.com/spiceit1/ticket-flip-scanner.git
 cd ticket-flip-scanner
+npm install
+```
 
-# Install dependencies
+### Flip Tracker Web UI
+
+**Repository:** https://github.com/spiceit1/flip-tracker
+
+Standalone Next.js app for managing flips, viewing deals, and editing scanner rules:
+
+```bash
+git clone https://github.com/spiceit1/flip-tracker.git
+cd flip-tracker
 npm install
 
-# Or if already on the machine, just pull latest
-git pull
+# Set database URL
+export DATABASE_URL="postgresql://neondb_owner:..."
+
+npm run dev
+# Open http://localhost:3000/flips
 ```
+
+**Pages:**
+- `/flips` — Flip Tracker (add/edit flips, track profit/ROI)
+- `/deals` — Deal Log (view all scanner-found deals)
+- `/scanner-rules` — Editable scanner configuration (fees, thresholds, etc.)
 
 ### Key Files Location
 
