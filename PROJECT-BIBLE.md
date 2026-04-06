@@ -495,7 +495,9 @@ Capped at 200 entries — oldest pruned when exceeded.
 
 ### Email Formatting
 
-Rich HTML email with dark theme design. Sections:
+Rich HTML email with dark theme design. **Location:** `formatDealAlertHTML()` function in `scanner.js` (lines ~1567-2000).
+
+The email template is a JavaScript function that builds an HTML string programmatically. Key sections:
 - **Header card:** Event name, date, venue, ROI badge, zone badge, days-away badge
 - **Ticket details:** Zone, section, row, quantity, platform
 - **Buy price:** All-in price with fee breakdown, delivery cost, total cost, BUY NOW button
@@ -506,7 +508,9 @@ Rich HTML email with dark theme design. Sections:
 - **Links:** Buy tickets, StubHub event page, Ticketmaster search, venue map
 - **Flags:** All warnings and validations
 
-Email sent via `gog` CLI (Google Workspace): `gog gmail send --to ddweck14@gmail.com --body-html {html}`
+**To modify the email template:** Edit the `formatDealAlertHTML()` function in `scanner.js`. The function takes `dealAlert` and `deal` objects and returns a complete HTML email string.
+
+**Email sending:** Via `gog` CLI (Google Workspace): `gog gmail send --to ddweck14@gmail.com --body-html {html}`
 
 ### Scout Status Updates
 
